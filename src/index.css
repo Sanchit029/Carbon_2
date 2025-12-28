@@ -1,0 +1,122 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* setting default font */
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body styles - dark background with white text */
+body {
+  background-color: #0D0D0D;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scrollbar - purple color */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B5CF6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* gradient background with purple and pink */
+.gradient-bg {
+  background: radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 80%, rgba(217, 70, 239, 0.2) 0%, transparent 50%),
+              #0D0D0D;
+}
+
+/* gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* primary button style */
+.btn-primary {
+  @apply bg-primary-purple hover:bg-purple-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105;
+}
+
+/* outline button style */
+.btn-outline {
+  @apply border-2 border-white text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:bg-white hover:text-black;
+}
+
+/* card hover animation */
+.card-hover {
+  @apply transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20;
+}
+
+/* glowing effect for nft cards */
+.nft-glow {
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+}
+
+/* gradient border for cards */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(#0D0D0D, #0D0D0D) padding-box,
+              linear-gradient(135deg, #8B5CF6, #D946EF) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+}
+
+/* floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* glowing pulse animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
