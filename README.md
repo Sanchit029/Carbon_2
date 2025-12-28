@@ -4,7 +4,7 @@ A modern, fully responsive NFT marketplace landing page built with React, Vite, 
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://nft-marketplace-demo.vercel.app)
+[View Live Demo]([https://carbon-2.vercel.app/](https://carbon-2.vercel.app/))
 
 ## ✨ Features
 
